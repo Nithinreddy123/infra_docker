@@ -1,0 +1,16 @@
+version: "3.7"
+services: 
+   nginx:
+    image: nginx:latest
+    container_name: nginx_host
+    ports:
+      - "80:80"
+    volumes:
+      - /home/ec2-user/infra-docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+networks:
+  default:
+    name: nithin
+    external: true
+
+
+   
